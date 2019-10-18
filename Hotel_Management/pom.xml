@@ -66,6 +66,13 @@
       <artifactId>mybatis</artifactId>
       <version>3.4.2</version>
     </dependency>
+
+
+    <dependency>
+      <groupId>commons-dbcp</groupId>
+      <artifactId>commons-dbcp</artifactId>
+      <version>1.4</version>
+    </dependency>
     <!-- MyBatis整合Spring的适配包 -->
     <dependency>
       <groupId>org.mybatis</groupId>
@@ -125,6 +132,11 @@
       <artifactId>spring-tx</artifactId>
       <version>4.3.7.RELEASE</version>
     </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-aspects</artifactId>
+      <version>5.1.8.RELEASE</version>
+    </dependency>
     <!--3. Spring WEB依赖 -->
     <dependency>
       <groupId>org.springframework</groupId>
@@ -142,14 +154,43 @@
       <artifactId>spring-test</artifactId>
       <version>4.3.7.RELEASE</version>
     </dependency>
+    <!--分页-->
+    <dependency>
+      <groupId>com.github.pagehelper</groupId>
+      <artifactId>pagehelper</artifactId>
+      <version>5.1.8</version>
+    </dependency>
   </dependencies>
 
 
 
   <build>
     <finalName>Hotel_Management</finalName>
+    <resources>
+      <resource>
+        <directory>${basedir}/src/main/java</directory>
+        <includes>
+          <include>**/*.xml</include>
+          <include>**/*.properties</include>
+        </includes>
+      </resource>
+      <resource>
+        <directory>${basedir}/src/main/resources</directory>
+        <includes>
+          <include>**/*.xml</include>
+          <include>**/*.properties</include>
+        </includes>
+      </resource>
+    </resources>
+
+
+
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+
+
       <plugins>
+
+
         <plugin>
           <artifactId>maven-clean-plugin</artifactId>
           <version>3.1.0</version>
