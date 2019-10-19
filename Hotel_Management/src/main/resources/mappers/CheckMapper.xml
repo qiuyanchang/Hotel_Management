@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.mju.hotel.dao.CheckMapper" >
+  <!--<resultMap id="BaseResultMap" type="cn.mju.pojo.Check" >-->
+    <!--<id column="id" property="id" jdbcType="INTEGER" />-->
+    <!--<result column="reserve_id" property="reserveId" jdbcType="INTEGER" />-->
+    <!--<result column="check_id_num" property="checkIdNum" jdbcType="VARCHAR" />-->
+    <!--<result column="check_phone_num" property="checkPhoneNum" jdbcType="VARCHAR" />-->
+    <!--<result column="check_name" property="checkName" jdbcType="VARCHAR" />-->
+    <!--<result column="check_sex" property="checkSex" jdbcType="VARCHAR" />-->
+    <!--<result column="check_in_time" property="checkInTime" jdbcType="TIMESTAMP" />-->
+    <!--<result column="check_out_time" property="checkOutTime" jdbcType="TIMESTAMP" />-->
+    <!--<result column="check_room_id" property="checkRoomId" jdbcType="VARCHAR" />-->
+    <!--<result column="check_day" property="checkDay" jdbcType="INTEGER" />-->
+    <!--<result column="check_price" property="checkPrice" jdbcType="DECIMAL" />-->
+    <!--<result column="check_status" property="checkStatus" jdbcType="VARCHAR" />-->
+  <!--</resultMap>-->
+  <!--<resultMap id="ResultMapWithBLOBs" type="cn.mju.pojo.Check" extends="BaseResultMap" >-->
+    <!--<result column="remark" property="remark" jdbcType="LONGVARCHAR" />-->
+  <!--</resultMap>-->
+  <!--<sql id="Base_Column_List" >-->
+    <!--id, reserve_id, check_id_num, check_phone_num, check_name, check_sex, check_in_time, -->
+    <!--check_out_time, check_room_id, check_day, check_price, check_status-->
+  <!--</sql>-->
+  <!--<sql id="Blob_Column_List" >-->
+    <!--remark-->
+  <!--</sql>-->
+  <!--<select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer" >-->
+    <!--select -->
+    <!--<include refid="Base_Column_List" />-->
+    <!--,-->
+    <!--<include refid="Blob_Column_List" />-->
+    <!--from check-->
+    <!--where id = #{id,jdbcType=INTEGER}-->
+  <!--</select>-->
+  <!--<delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >-->
+    <!--delete from check-->
+    <!--where id = #{id,jdbcType=INTEGER}-->
+  <!--</delete>-->
+  <!--<insert id="insert" parameterType="cn.mju.pojo.Check" >-->
+    <!--insert into check (id, reserve_id, check_id_num, -->
+      <!--check_phone_num, check_name, check_sex, -->
+      <!--check_in_time, check_out_time, check_room_id, -->
+      <!--check_day, check_price, check_status, -->
+      <!--remark)-->
+    <!--values (#{id,jdbcType=INTEGER}, #{reserveId,jdbcType=INTEGER}, #{checkIdNum,jdbcType=VARCHAR}, -->
+      <!--#{checkPhoneNum,jdbcType=VARCHAR}, #{checkName,jdbcType=VARCHAR}, #{checkSex,jdbcType=VARCHAR}, -->
+      <!--#{checkInTime,jdbcType=TIMESTAMP}, #{checkOutTime,jdbcType=TIMESTAMP}, #{checkRoomId,jdbcType=VARCHAR}, -->
+      <!--#{checkDay,jdbcType=INTEGER}, #{checkPrice,jdbcType=DECIMAL}, #{checkStatus,jdbcType=VARCHAR}, -->
+      <!--#{remark,jdbcType=LONGVARCHAR})-->
+  <!--</insert>-->
+  <!--<insert id="insertSelective" parameterType="cn.mju.pojo.Check" >-->
+    <!--insert into check-->
+    <!--<trim prefix="(" suffix=")" suffixOverrides="," >-->
+      <!--<if test="id != null" >-->
+        <!--id,-->
+      <!--</if>-->
+      <!--<if test="reserveId != null" >-->
+        <!--reserve_id,-->
+      <!--</if>-->
+      <!--<if test="checkIdNum != null" >-->
+        <!--check_id_num,-->
+      <!--</if>-->
+      <!--<if test="checkPhoneNum != null" >-->
+        <!--check_phone_num,-->
+      <!--</if>-->
+      <!--<if test="checkName != null" >-->
+        <!--check_name,-->
+      <!--</if>-->
+      <!--<if test="checkSex != null" >-->
+        <!--check_sex,-->
+      <!--</if>-->
+      <!--<if test="checkInTime != null" >-->
+        <!--check_in_time,-->
+      <!--</if>-->
+      <!--<if test="checkOutTime != null" >-->
+        <!--check_out_time,-->
+      <!--</if>-->
+      <!--<if test="checkRoomId != null" >-->
+        <!--check_room_id,-->
+      <!--</if>-->
+      <!--<if test="checkDay != null" >-->
+        <!--check_day,-->
+      <!--</if>-->
+      <!--<if test="checkPrice != null" >-->
+        <!--check_price,-->
+      <!--</if>-->
+      <!--<if test="checkStatus != null" >-->
+        <!--check_status,-->
+      <!--</if>-->
+      <!--<if test="remark != null" >-->
+        <!--remark,-->
+      <!--</if>-->
+    <!--</trim>-->
+    <!--<trim prefix="values (" suffix=")" suffixOverrides="," >-->
+      <!--<if test="id != null" >-->
+        <!--#{id,jdbcType=INTEGER},-->
+      <!--</if>-->
+      <!--<if test="reserveId != null" >-->
+        <!--#{reserveId,jdbcType=INTEGER},-->
+      <!--</if>-->
+      <!--<if test="checkIdNum != null" >-->
+        <!--#{checkIdNum,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="checkPhoneNum != null" >-->
+        <!--#{checkPhoneNum,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="checkName != null" >-->
+        <!--#{checkName,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="checkSex != null" >-->
+        <!--#{checkSex,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="checkInTime != null" >-->
+        <!--#{checkInTime,jdbcType=TIMESTAMP},-->
+      <!--</if>-->
+      <!--<if test="checkOutTime != null" >-->
+        <!--#{checkOutTime,jdbcType=TIMESTAMP},-->
+      <!--</if>-->
+      <!--<if test="checkRoomId != null" >-->
+        <!--#{checkRoomId,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="checkDay != null" >-->
+        <!--#{checkDay,jdbcType=INTEGER},-->
+      <!--</if>-->
+      <!--<if test="checkPrice != null" >-->
+        <!--#{checkPrice,jdbcType=DECIMAL},-->
+      <!--</if>-->
+      <!--<if test="checkStatus != null" >-->
+        <!--#{checkStatus,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="remark != null" >-->
+        <!--#{remark,jdbcType=LONGVARCHAR},-->
+      <!--</if>-->
+    <!--</trim>-->
+  <!--</insert>-->
+  <!--<update id="updateByPrimaryKeySelective" parameterType="cn.mju.pojo.Check" >-->
+    <!--update check-->
+    <!--<set >-->
+      <!--<if test="reserveId != null" >-->
+        <!--reserve_id = #{reserveId,jdbcType=INTEGER},-->
+      <!--</if>-->
+      <!--<if test="checkIdNum != null" >-->
+        <!--check_id_num = #{checkIdNum,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="checkPhoneNum != null" >-->
+        <!--check_phone_num = #{checkPhoneNum,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="checkName != null" >-->
+        <!--check_name = #{checkName,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="checkSex != null" >-->
+        <!--check_sex = #{checkSex,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="checkInTime != null" >-->
+        <!--check_in_time = #{checkInTime,jdbcType=TIMESTAMP},-->
+      <!--</if>-->
+      <!--<if test="checkOutTime != null" >-->
+        <!--check_out_time = #{checkOutTime,jdbcType=TIMESTAMP},-->
+      <!--</if>-->
+      <!--<if test="checkRoomId != null" >-->
+        <!--check_room_id = #{checkRoomId,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="checkDay != null" >-->
+        <!--check_day = #{checkDay,jdbcType=INTEGER},-->
+      <!--</if>-->
+      <!--<if test="checkPrice != null" >-->
+        <!--check_price = #{checkPrice,jdbcType=DECIMAL},-->
+      <!--</if>-->
+      <!--<if test="checkStatus != null" >-->
+        <!--check_status = #{checkStatus,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="remark != null" >-->
+        <!--remark = #{remark,jdbcType=LONGVARCHAR},-->
+      <!--</if>-->
+    <!--</set>-->
+    <!--where id = #{id,jdbcType=INTEGER}-->
+  <!--</update>-->
+  <!--<update id="updateByPrimaryKeyWithBLOBs" parameterType="cn.mju.pojo.Check" >-->
+    <!--update check-->
+    <!--set reserve_id = #{reserveId,jdbcType=INTEGER},-->
+      <!--check_id_num = #{checkIdNum,jdbcType=VARCHAR},-->
+      <!--check_phone_num = #{checkPhoneNum,jdbcType=VARCHAR},-->
+      <!--check_name = #{checkName,jdbcType=VARCHAR},-->
+      <!--check_sex = #{checkSex,jdbcType=VARCHAR},-->
+      <!--check_in_time = #{checkInTime,jdbcType=TIMESTAMP},-->
+      <!--check_out_time = #{checkOutTime,jdbcType=TIMESTAMP},-->
+      <!--check_room_id = #{checkRoomId,jdbcType=VARCHAR},-->
+      <!--check_day = #{checkDay,jdbcType=INTEGER},-->
+      <!--check_price = #{checkPrice,jdbcType=DECIMAL},-->
+      <!--check_status = #{checkStatus,jdbcType=VARCHAR},-->
+      <!--remark = #{remark,jdbcType=LONGVARCHAR}-->
+    <!--where id = #{id,jdbcType=INTEGER}-->
+  <!--</update>-->
+  <!--<update id="updateByPrimaryKey" parameterType="cn.mju.pojo.Check" >-->
+    <!--update check-->
+    <!--set reserve_id = #{reserveId,jdbcType=INTEGER},-->
+      <!--check_id_num = #{checkIdNum,jdbcType=VARCHAR},-->
+      <!--check_phone_num = #{checkPhoneNum,jdbcType=VARCHAR},-->
+      <!--check_name = #{checkName,jdbcType=VARCHAR},-->
+      <!--check_sex = #{checkSex,jdbcType=VARCHAR},-->
+      <!--check_in_time = #{checkInTime,jdbcType=TIMESTAMP},-->
+      <!--check_out_time = #{checkOutTime,jdbcType=TIMESTAMP},-->
+      <!--check_room_id = #{checkRoomId,jdbcType=VARCHAR},-->
+      <!--check_day = #{checkDay,jdbcType=INTEGER},-->
+      <!--check_price = #{checkPrice,jdbcType=DECIMAL},-->
+      <!--check_status = #{checkStatus,jdbcType=VARCHAR}-->
+    <!--where id = #{id,jdbcType=INTEGER}-->
+  <!--</update>-->
+</mapper>
